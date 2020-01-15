@@ -1,0 +1,105 @@
+<RCC>
+    <qresource prefix="/new/preview">
+        <file>images/fit-page-24.png</file>
+        <file>images/fit-width-24.png</file>
+        <file>images/go-first-24.png</file>
+        <file>images/go-last-24.png</file>
+        <file>images/go-next-24.png</file>
+        <file>images/go-previous-24.png</file>
+        <file>images/layout-landscape-24.png</file>
+        <file>images/layout-portrait-24.png</file>
+        <file>images/page-setup-24.png</file>
+        <file>images/print-24.png</file>
+        <file>images/view-page-one-24.png</file>
+        <file>images/view-page-sided-24.png</file>
+        <file>images/zoom-in-24.png</file>
+        <file>images/zoom-out-24.png</file>
+        <file>images/view-page-multi-24.png</file>
+        <file>images/PDF-32.png</file>
+        <file>images/PDF-32_2.png</file>
+        <file>images/PDF-24.png</file>
+    </qresource>
+    <qresource prefix="/new/designer">
+        <file>images/alignH_centre.png</file>
+        <file>images/alignH_justify.png</file>
+        <file>images/alignH_left.png</file>
+        <file>images/alignH_right.png</file>
+        <file>images/bold.png</file>
+        <file>images/bringtoback.png</file>
+        <file>images/bringtofront.png</file>
+        <file>images/close.png</file>
+        <file>images/COPY.png</file>
+        <file>images/CUT.png</file>
+        <file>images/del page.png</file>
+        <file>images/Help.png</file>
+        <file>images/Italic.png</file>
+        <file>images/New page.png</file>
+        <file>images/new.png</file>
+        <file>images/open.png</file>
+        <file>images/Page Setup.png</file>
+        <file>images/paste.png</file>
+        <file>images/Print Preview.png</file>
+        <file>images/Redo.png</file>
+        <file>images/report setup.png</file>
+        <file>images/save.png</file>
+        <file>images/selectall.png</file>
+        <file>images/Undo.png</file>
+        <file>images/band.png</file>
+        <file>images/figure.png</file>
+        <file>images/Line.png</file>
+        <file>images/cursor.png</file>
+        <file>images/text.png</file>
+        <file>images/image.png</file>
+        <file>images/shape_align_bottom.png</file>
+        <file>images/shape_align_center.png</file>
+        <file>images/shape_align_left.png</file>
+        <file>images/shape_align_middle.png</file>
+        <file>images/shape_align_right.png</file>
+        <file>images/shape_align_top.png</file>
+        <file>images/shape_align_hor_same.png</file>
+        <file>images/shape_align_ver_same.png</file>
+        <file>images/shape_align_center_page_hor.png</file>
+        <file>images/shape_align_center_page_ver.png</file>
+        <file>images/align bottom.png</file>
+        <file>images/align centr.png</file>
+        <file>images/align top.png</file>
+        <file>images/back color.png</file>
+        <file>images/pen color.png</file>
+        <file>images/Text color.png</file>
+        <file>images/style line.png</file>
+        <file>images/underline.png</file>
+        <file>images/border all.png</file>
+        <file>images/border bottom.png</file>
+        <file>images/border free.png</file>
+        <file>images/border left.png</file>
+        <file>images/border right.png</file>
+        <file>images/border top.png</file>
+        <file>images/verttext.png</file>
+        <file>images/barcode.png</file>
+        <file>images/database.png</file>
+        <file>images/List.png</file>
+        <file>images/table.png</file>
+        <file>images/delete.png</file>
+        <file>images/database_link.png</file>
+    </qresource>
+    <qresource prefix="/new/textures">
+        <file>images/textgrid4.png</file>
+        <file>images/textgrid8.png</file>
+        <file>images/textgrid18.png</file>
+    </qresource>
+    <qresource prefix="/new/cursors">
+        <file>images/pencilbw.png</file>
+    </qresource>
+    <qresource prefix="/new/dialogs">
+        <file>images/layout-landscape-32.png</file>
+        <file>images/layout-portrait-32.png</file>
+        <file>images/add.png</file>
+        <file>images/add_group.png</file>
+        <file>images/delete.png</file>
+        <file>images/variables.png</file>
+        <file>images/edit.png</file>
+        <file>images/functions.png</file>
+        <file>images/wordwrap.png</file>
+        <file>images/plaintext.png</file>
+    </qresource>
+</RCC>

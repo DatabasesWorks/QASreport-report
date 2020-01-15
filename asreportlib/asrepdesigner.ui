@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QASRepDesigner</class>
+ <widget class="QMainWindow" name="QASRepDesigner">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>736</width>
+    <height>437</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Report Designer</string>
+  </property>
+  <property name="locale">
+   <locale language="Russian" country="Ukraine"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitterGen">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QSplitter" name="splitter">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QTreeView" name="treeObjects">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectItems</enum>
+        </property>
+        <property name="autoExpandDelay">
+         <number>0</number>
+        </property>
+        <property name="itemsExpandable">
+         <bool>true</bool>
+        </property>
+        <property name="expandsOnDoubleClick">
+         <bool>false</bool>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+       <widget class="QTreeView" name="propView">
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::CurrentChanged|QAbstractItemView::EditKeyPressed</set>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Tab 1</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Tab 2</string>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>736</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionList_of_variables"/>
+    <addaction name="actionReport_parametres"/>
+    <addaction name="actionPage_parametres"/>
+    <addaction name="actionPreview"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPast"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionSelect_All"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_page"/>
+    <addaction name="actionDelete_page"/>
+    <addaction name="separator"/>
+    <addaction name="actionObject_up"/>
+    <addaction name="actionObject_down"/>
+   </widget>
+   <widget class="QMenu" name="menuService">
+    <property name="title">
+     <string>Service</string>
+    </property>
+    <widget class="QMenu" name="menuPanels">
+     <property name="title">
+      <string>Panels</string>
+     </property>
+     <addaction name="actionStandart"/>
+     <addaction name="actionText_2"/>
+     <addaction name="actionBorders"/>
+     <addaction name="actionObjects"/>
+     <addaction name="actionAlignment"/>
+    </widget>
+    <addaction name="menuPanels"/>
+    <addaction name="separator"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuService"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBarMain">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionPreview"/>
+   <addaction name="separator"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="separator"/>
+   <addaction name="actionObject_up"/>
+   <addaction name="actionObject_down"/>
+   <addaction name="actionSelect_All"/>
+   <addaction name="separator"/>
+   <addaction name="actionAdd_page"/>
+   <addaction name="actionDelete_page"/>
+   <addaction name="actionPage_parametres"/>
+   <addaction name="separator"/>
+   <addaction name="actionHelp"/>
+   <addaction name="separator"/>
+   <addaction name="actionSave_and_close"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarControls">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSelObject"/>
+   <addaction name="separator"/>
+   <addaction name="actionText"/>
+   <addaction name="actionBand"/>
+   <addaction name="actionPicture"/>
+   <addaction name="actionLine"/>
+   <addaction name="actionFigure"/>
+   <addaction name="actionBarcode"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarAlign">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>RightToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAlign_bottom"/>
+   <addaction name="actionAlign_top"/>
+   <addaction name="actionAlign_left"/>
+   <addaction name="actionAlign_right"/>
+   <addaction name="actionAlign_center"/>
+   <addaction name="actionAlign_middle"/>
+   <addaction name="actionAlign_center_horizontal"/>
+   <addaction name="actionAlign_center_vertical"/>
+   <addaction name="actionAlign_center_page_horizontal"/>
+   <addaction name="actionAlign_by_center_page_vertical"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarFont">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="actionBold"/>
+   <addaction name="actionItalic"/>
+   <addaction name="actionUnderline"/>
+   <addaction name="separator"/>
+   <addaction name="actionFont_color"/>
+   <addaction name="separator"/>
+   <addaction name="actionAlign_left_2"/>
+   <addaction name="actionAlign_centre"/>
+   <addaction name="actionAlign_right_2"/>
+   <addaction name="actionAlign_justify"/>
+   <addaction name="separator"/>
+   <addaction name="actionAlign_top_2"/>
+   <addaction name="actionAlign_center_2"/>
+   <addaction name="actionAlign_bottom_2"/>
+   <addaction name="separator"/>
+   <addaction name="actionVerttext"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarBorder">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionBorder_top"/>
+   <addaction name="actionBorder_left"/>
+   <addaction name="actionBorder_right"/>
+   <addaction name="actionBorder_bottom"/>
+   <addaction name="actionBorder_all"/>
+   <addaction name="actionBorder_free"/>
+   <addaction name="separator"/>
+   <addaction name="actionBack_color"/>
+   <addaction name="actionLine_color"/>
+   <addaction name="actionStyle_line"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/new.png</normaloff>:/new/designer/images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>New...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/open.png</normaloff>:/new/designer/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/save.png</normaloff>:/new/designer/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actionList_of_variables">
+   <property name="text">
+    <string>List of variables...</string>
+   </property>
+  </action>
+  <action name="actionReport_parametres">
+   <property name="text">
+    <string>Report parametres...</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionPage_parametres">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/Page Setup.png</normaloff>:/new/designer/images/Page Setup.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pages  parametres...</string>
+   </property>
+  </action>
+  <action name="actionPreview">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/Print Preview.png</normaloff>:/new/designer/images/Print Preview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preview...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/Undo.png</normaloff>:/new/designer/images/Undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/Redo.png</normaloff>:/new/designer/images/Redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/CUT.png</normaloff>:/new/designer/images/CUT.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/COPY.png</normaloff>:/new/designer/images/COPY.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPast">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/paste.png</normaloff>:/new/designer/images/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Past</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionSelect_All">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/selectall.png</normaloff>:/new/designer/images/selectall.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionAdd_page">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/New page.png</normaloff>:/new/designer/images/New page.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add page</string>
+   </property>
+  </action>
+  <action name="actionDelete_page">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/del page.png</normaloff>:/new/designer/images/del page.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete page</string>
+   </property>
+  </action>
+  <action name="actionObject_up">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/bringtofront.png</normaloff>:/new/designer/images/bringtofront.png</iconset>
+   </property>
+   <property name="text">
+    <string>Object up</string>
+   </property>
+   <property name="toolTip">
+    <string>Bring to front</string>
+   </property>
+  </action>
+  <action name="actionObject_down">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/bringtoback.png</normaloff>:/new/designer/images/bringtoback.png</iconset>
+   </property>
+   <property name="text">
+    <string>Object down</string>
+   </property>
+   <property name="toolTip">
+    <string>Bring to back</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/Help.png</normaloff>:/new/designer/images/Help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionSave_and_close">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/close.png</normaloff>:/new/designer/images/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save and close</string>
+   </property>
+   <property name="toolTip">
+    <string>Save and close</string>
+   </property>
+  </action>
+  <action name="actionText">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/text.png</normaloff>:/new/designer/images/text.png</iconset>
+   </property>
+   <property name="text">
+    <string>Text</string>
+   </property>
+   <property name="toolTip">
+    <string>Insert text</string>
+   </property>
+  </action>
+  <action name="actionBand">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/band.png</normaloff>:/new/designer/images/band.png</iconset>
+   </property>
+   <property name="text">
+    <string>Band</string>
+   </property>
+   <property name="toolTip">
+    <string>Insert band</string>
+   </property>
+  </action>
+  <action name="actionPicture">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/image.png</normaloff>:/new/designer/images/image.png</iconset>
+   </property>
+   <property name="text">
+    <string>Picture</string>
+   </property>
+   <property name="toolTip">
+    <string>Insert picture</string>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/Line.png</normaloff>:/new/designer/images/Line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Line</string>
+   </property>
+   <property name="toolTip">
+    <string>Draw line</string>
+   </property>
+  </action>
+  <action name="actionFigure">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/figure.png</normaloff>:/new/designer/images/figure.png</iconset>
+   </property>
+   <property name="text">
+    <string>Figure</string>
+   </property>
+   <property name="toolTip">
+    <string>Draw figure</string>
+   </property>
+  </action>
+  <action name="actionSelObject">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/cursor.png</normaloff>:/new/designer/images/cursor.png</iconset>
+   </property>
+   <property name="text">
+    <string>selObject</string>
+   </property>
+   <property name="toolTip">
+    <string>Select object</string>
+   </property>
+  </action>
+  <action name="actionAlign_bottom">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_bottom.png</normaloff>:/new/designer/images/shape_align_bottom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align bottom</string>
+   </property>
+  </action>
+  <action name="actionAlign_top">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_top.png</normaloff>:/new/designer/images/shape_align_top.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align top</string>
+   </property>
+  </action>
+  <action name="actionAlign_left">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_left.png</normaloff>:/new/designer/images/shape_align_left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align left</string>
+   </property>
+  </action>
+  <action name="actionAlign_right">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_right.png</normaloff>:/new/designer/images/shape_align_right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align right</string>
+   </property>
+  </action>
+  <action name="actionAlign_center">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_center.png</normaloff>:/new/designer/images/shape_align_center.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align center</string>
+   </property>
+  </action>
+  <action name="actionAlign_middle">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_middle.png</normaloff>:/new/designer/images/shape_align_middle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align middle</string>
+   </property>
+  </action>
+  <action name="actionAlign_center_horizontal">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_hor_same.png</normaloff>:/new/designer/images/shape_align_hor_same.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align evenly by width</string>
+   </property>
+  </action>
+  <action name="actionAlign_center_vertical">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_ver_same.png</normaloff>:/new/designer/images/shape_align_ver_same.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align evenly by height</string>
+   </property>
+  </action>
+  <action name="actionAlign_center_page_horizontal">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_center_page_hor.png</normaloff>:/new/designer/images/shape_align_center_page_hor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align center page horizontal</string>
+   </property>
+  </action>
+  <action name="actionAlign_by_center_page_vertical">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/shape_align_center_page_ver.png</normaloff>:/new/designer/images/shape_align_center_page_ver.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align center page vertical</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/bold.png</normaloff>:/new/designer/images/bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bold</string>
+   </property>
+   <property name="toolTip">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionItalic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/Italic.png</normaloff>:/new/designer/images/Italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Italic</string>
+   </property>
+   <property name="toolTip">
+    <string>Italic</string>
+   </property>
+  </action>
+  <action name="actionUnderline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/underline.png</normaloff>:/new/designer/images/underline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Underline</string>
+   </property>
+   <property name="toolTip">
+    <string>Underline</string>
+   </property>
+  </action>
+  <action name="actionFont_color">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/Text color.png</normaloff>:/new/designer/images/Text color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Font color</string>
+   </property>
+   <property name="toolTip">
+    <string>Font color</string>
+   </property>
+  </action>
+  <action name="actionAlign_left_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/alignH_left.png</normaloff>:/new/designer/images/alignH_left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align left</string>
+   </property>
+   <property name="toolTip">
+    <string>Align left</string>
+   </property>
+  </action>
+  <action name="actionAlign_centre">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/alignH_centre.png</normaloff>:/new/designer/images/alignH_centre.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align centre</string>
+   </property>
+   <property name="toolTip">
+    <string>Align centre</string>
+   </property>
+  </action>
+  <action name="actionAlign_right_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/alignH_right.png</normaloff>:/new/designer/images/alignH_right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align right</string>
+   </property>
+   <property name="toolTip">
+    <string>Align right</string>
+   </property>
+  </action>
+  <action name="actionAlign_justify">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/alignH_justify.png</normaloff>:/new/designer/images/alignH_justify.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align justify</string>
+   </property>
+   <property name="toolTip">
+    <string>Align justify</string>
+   </property>
+  </action>
+  <action name="actionAlign_top_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/align top.png</normaloff>:/new/designer/images/align top.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align top</string>
+   </property>
+   <property name="toolTip">
+    <string>Align top</string>
+   </property>
+  </action>
+  <action name="actionAlign_bottom_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/align bottom.png</normaloff>:/new/designer/images/align bottom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align bottom</string>
+   </property>
+   <property name="toolTip">
+    <string>Align bottom</string>
+   </property>
+  </action>
+  <action name="actionAlign_center_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/align centr.png</normaloff>:/new/designer/images/align centr.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align center</string>
+   </property>
+  </action>
+  <action name="actionBack_color">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/back color.png</normaloff>:/new/designer/images/back color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Back color</string>
+   </property>
+   <property name="toolTip">
+    <string>Back color</string>
+   </property>
+  </action>
+  <action name="actionLine_color">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/pen color.png</normaloff>:/new/designer/images/pen color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Line color</string>
+   </property>
+   <property name="toolTip">
+    <string>Line color</string>
+   </property>
+  </action>
+  <action name="actionStyle_line">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/style line.png</normaloff>:/new/designer/images/style line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Style line</string>
+   </property>
+   <property name="toolTip">
+    <string>Style line</string>
+   </property>
+  </action>
+  <action name="actionBorder_top">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/border top.png</normaloff>:/new/designer/images/border top.png</iconset>
+   </property>
+   <property name="text">
+    <string>Border top</string>
+   </property>
+   <property name="toolTip">
+    <string>Border top</string>
+   </property>
+  </action>
+  <action name="actionBorder_left">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/border left.png</normaloff>:/new/designer/images/border left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Border left</string>
+   </property>
+   <property name="toolTip">
+    <string>Border left</string>
+   </property>
+  </action>
+  <action name="actionBorder_right">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/border right.png</normaloff>:/new/designer/images/border right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Border right</string>
+   </property>
+   <property name="toolTip">
+    <string>Border right</string>
+   </property>
+  </action>
+  <action name="actionBorder_bottom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/border bottom.png</normaloff>:/new/designer/images/border bottom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Border bottom</string>
+   </property>
+   <property name="toolTip">
+    <string>Border bottom</string>
+   </property>
+  </action>
+  <action name="actionBorder_free">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/border free.png</normaloff>:/new/designer/images/border free.png</iconset>
+   </property>
+   <property name="text">
+    <string>Without border</string>
+   </property>
+   <property name="toolTip">
+    <string>Border free</string>
+   </property>
+  </action>
+  <action name="actionBorder_all">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/border all.png</normaloff>:/new/designer/images/border all.png</iconset>
+   </property>
+   <property name="text">
+    <string>All borders</string>
+   </property>
+   <property name="toolTip">
+    <string>Border all</string>
+   </property>
+  </action>
+  <action name="actionEditor">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Editor...</string>
+   </property>
+   <property name="toolTip">
+    <string>Editor...</string>
+   </property>
+  </action>
+  <action name="actionFormat_variable">
+   <property name="text">
+    <string>Format variable...</string>
+   </property>
+   <property name="toolTip">
+    <string>Format variable...</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="text">
+    <string>Font...</string>
+   </property>
+   <property name="toolTip">
+    <string>Font...</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionWord_wrap">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Word wrap</string>
+   </property>
+   <property name="toolTip">
+    <string>Word wrap</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionStretchable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Stretchable</string>
+   </property>
+   <property name="toolTip">
+    <string>Stretchable</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionVerttext">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/verttext.png</normaloff>:/new/designer/images/verttext.png</iconset>
+   </property>
+   <property name="text">
+    <string>verttext</string>
+   </property>
+   <property name="toolTip">
+    <string>Text vertical</string>
+   </property>
+  </action>
+  <action name="actionBarcode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/designer/images/barcode.png</normaloff>:/new/designer/images/barcode.png</iconset>
+   </property>
+   <property name="text">
+    <string>Barcode</string>
+   </property>
+   <property name="toolTip">
+    <string>Barcode</string>
+   </property>
+  </action>
+  <action name="actionStandart">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Standart</string>
+   </property>
+   <property name="toolTip">
+    <string>Standart</string>
+   </property>
+  </action>
+  <action name="actionText_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Text</string>
+   </property>
+   <property name="toolTip">
+    <string>Text</string>
+   </property>
+  </action>
+  <action name="actionBorders">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Borders</string>
+   </property>
+   <property name="toolTip">
+    <string>Borders</string>
+   </property>
+  </action>
+  <action name="actionObjects">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Objects</string>
+   </property>
+   <property name="toolTip">
+    <string>Objects</string>
+   </property>
+  </action>
+  <action name="actionAlignment">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Alignment</string>
+   </property>
+   <property name="toolTip">
+    <string>Alignment</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
