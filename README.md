@@ -1,4 +1,4 @@
-# QASreport
+# QASreport 1.0.2 2018-02-12
 
 Original Repository: https://sourceforge.net/projects/qasreport/
 
