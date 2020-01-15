@@ -15,6 +15,11 @@ QASreport - is a multi-platform C ++ Qt library that contains a set of classes f
 * Full control over the printing process, support of any type of paper and printing devices;
 * Easy to design a report using simple components: a text box, line, image, shape, and bar-code;
 * The output data of any database, which the driver is installed;
+* The output data from any SQL model, QSqlQueryModel inheritor;
+* Data output from any of the standard model, the inheritable QAbstractItemModel;
+* Export reports to PDF files;
+* Support for Qt Script (in the future);
+* others
 
 ![screenshot](./screenshots/screenshot1.jpg)
 ![screenshot](./screenshots/screenshot2.jpg)
