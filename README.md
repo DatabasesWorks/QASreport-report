@@ -16,9 +16,9 @@ QASreport - is a multi-platform C ++ Qt library that contains a set of classes f
 * Easy to design a report using simple components: a text box, line, image, shape, and bar-code;
 * The output data of any database, which the driver is installed;
 
-![screenshot](./screenshot/screenshot1.jpg)
-![screenshot](./screenshot/screenshot2.jpg)
-![screenshot](./screenshot/screenshot3.jpg)
-![screenshot](./screenshot/screenshot4.jpg)
-![screenshot](./screenshot/screenshot5.jpg)
-![screenshot](./screenshot/screenshot6.jpg)
+![screenshot](./screenshots/screenshot1.jpg)
+![screenshot](./screenshots/screenshot2.jpg)
+![screenshot](./screenshots/screenshot3.jpg)
+![screenshot](./screenshots/screenshot4.jpg)
+![screenshot](./screenshots/screenshot5.jpg)
+![screenshot](./screenshots/screenshot6.jpg)
